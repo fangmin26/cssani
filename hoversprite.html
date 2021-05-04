@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin:0;padding:0;box-sizing: border-box;}
+        body{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            min-height:100vh;
+            overflow:hidden;
+        }
+        .imgBx{
+            position:relative;
+            width:400px; height:400px;}
+        .imgBx img:first-child{
+        position:absolute;
+        width:100%;height:100%;
+        left:0;top:0;
+        transform-origin:left;/*transform방향*/
+        }
+        .imgBx:hover img:first-child{
+            transition:4s;
+            transition-delay: 1s;
+            transform:translateX(50px);
+            opacity:0;
+            filter:blur(10px);
+        }
+        .imgBx img:nth-child(2){
+             width:1200px;
+             height:400px;
+             transform:translateX(400px)scaleX(0);
+             transform-origin:left;
+        }
+        .imgBx:hover img:nth-child(2){
+             transition:8s;
+             transform:translateX(-400px)scaleX(1);
+
+        }
+    </style>
+</head>
+<body>
+    <div class="imgBx">
+        <img src="img/black.jpg" alt="">
+        <img src="img/noise.png" alt="">
+    </div>
+</body>
+</html>
