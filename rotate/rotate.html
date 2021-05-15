@@ -19,7 +19,7 @@
   grid-template-columns: repeat(4, 1fr);
 }
 .container{
-    width:100px;
+  width:100px;
   height:100px;
   position:relative;
 }
@@ -30,9 +30,11 @@
   right:-7.5px;
   width:15px;
   height:15px;
+  background:#e8e8e8;
+}
+body:hover .container::after{
   background:#000;
 }
-
 .container:nth-of-type(2),
 .container:nth-of-type(4),
 .container:nth-of-type(5),
@@ -45,42 +47,28 @@
 .face{
   width:100%;
   height:100%;
-  border:2px solid black;
+  border:2px solid #e8e8e8;
   box-sizing:border-box;
-  color:#000;
+  color:#e8e8e8;
   line-height:100px;
   text-align:center;
 }
+body:hover .face{
+  border:2px solid black;
+  color:#000;
+}
   .rotate-diagonal-1 {
-	-webkit-animation: rotate-diagonal-1 2s linear 1s infinite both;
-	        animation: rotate-diagonal-1 2s linear 1s infinite both;
+		        animation: rotate-diagonal-1 2s linear 1s infinite both;
 }
 
-@-webkit-keyframes rotate-diagonal-1 {
-  0% {
-    -webkit-transform: rotate3d(1, 1, 0, 0deg);
-            transform: rotate3d(1, 1, 0, 0deg);
-  }
-  50% {
-    -webkit-transform: rotate3d(1, 1, 0, -180deg);
-            transform: rotate3d(1, 1, 0, -180deg);
-  }
-  100% {
-    -webkit-transform: rotate3d(1, 1, 0, -360deg);
-            transform: rotate3d(1, 1, 0, -360deg);
-  }
-}
 @keyframes rotate-diagonal-1 {
   0% {
-    -webkit-transform: rotate3d(1, 1, 0, 0deg);
             transform: rotate3d(1, 1, 0, 0deg);
   }
   50% {
-    -webkit-transform: rotate3d(1, 1, 0, -180deg);
             transform: rotate3d(1, 1, 0, -180deg);
   }
   100% {
-    -webkit-transform: rotate3d(1, 1, 0, -360deg);
             transform: rotate3d(1, 1, 0, -360deg);
   }
 }
